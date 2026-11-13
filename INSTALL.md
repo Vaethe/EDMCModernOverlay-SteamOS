@@ -5,7 +5,7 @@
 All commands below run on the **SteamOS host**, never inside Fedora Distrobox. Leave SteamOS's protected system partition read-only.
 
 ## 1. Prepare EDMC
-Verify EDMC Flatpak is installed, disable the older edmcoverlay2/EDMCOverlay plugin in EDMC, then close EDMC.
+Verify EDMC Flatpak is installed. Disable older edmcoverlay2/EDMCOverlay plugin if previously instsalled in EDMC, then close EDMC.
 
 ```bash
 flatpak list --app | grep -i market
