@@ -1,0 +1,17 @@
+--- a/load.py
++++ b/load.py
+@@ -3331,3 +3331,13 @@
+         LOGGER.info("Launching overlay client via flatpak-spawn host interpreter at %s", host_python)
+         env_args = self._flatpak_env_arguments(overlay_env)
+-        return [spawn_path, "--host", *env_args, host_python]
++
++        # Make locally installed utilities available to the host overlay client.
++        host_path = "/home/deck/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin"
++
++        return [
++            spawn_path,
++            "--host",
++            *env_args,
++            f"--env=PATH={host_path}",
++            host_python,
++        ]
