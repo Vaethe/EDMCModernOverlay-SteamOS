@@ -1,6 +1,7 @@
 --- a/load.py
 +++ b/load.py
-@@ -3331,3 +3331,13 @@
+@@ -3329,7 +3329,17 @@
+             return None
          LOGGER.info("Launching overlay client via flatpak-spawn host interpreter at %s", host_python)
          env_args = self._flatpak_env_arguments(overlay_env)
 -        return [spawn_path, "--host", *env_args, host_python]
@@ -15,3 +16,6 @@
 +            f"--env=PATH={host_path}",
 +            host_python,
 +        ]
+ 
+     def _flatpak_python_command(self, overlay_env: Optional[Dict[str, str]]) -> Optional[List[str]]:
+         """Compat shim for legacy callers; delegates to _flatpak_host_command."""
