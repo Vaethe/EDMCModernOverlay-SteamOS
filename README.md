@@ -2,7 +2,7 @@
 
 SteamOS-specific installation, compatibility patches and maintenance notes for [EDMCModernOverlay](https://github.com/SweetJonnySauce/EDMCModernOverlay).
 
-**Verified environment (13 November 2026):** Steam Deck (Corsair), SteamOS KDE Plasma **Desktop Mode** (Wayland with Xwayland), EDMC Flatpak 6.1.2 and EDMCModernOverlay Linux release 0.9.2. The complete test overlay was displayed successfully over Elite Dangerous. **SteamOS Gaming Mode was not tested.**
+**Verified environment (13 November 2026):** Steam Deck, SteamOS KDE Plasma **Desktop Mode** (Wayland with Xwayland), EDMC Flatpak 6.1.2 and EDMCModernOverlay Linux release 0.9.2. The complete test overlay was displayed successfully over Elite Dangerous. **SteamOS Gaming Mode was not tested.**
 
 ## Start here
 
