@@ -1,0 +1,16 @@
+# Never commit local deployment state or archives
+.venv/
+__pycache__/
+*.pyc
+*.log
+*.tar.gz
+*.pkg.tar.*
+*.backup
+*.bak
+*.orig
+*.rej
+.env
+.env.*
+private/
+backups/
+downloads/
