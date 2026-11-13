@@ -1,0 +1,18 @@
+--- a/install_linux.sh
++++ b/install_linux.sh
+@@ -2119,11 +2119,12 @@
+     else
+         local prompt_message="Install / upgrade ${#action_packages[@]} package(s) now?"
+         if ! prompt_yes_no "$prompt_message"; then
+-            echo "❌ Installation cannot continue without required system packages." >&2
+-            local declined_list
+-            declined_list="$(format_list_or_none "${action_packages[@]}")"
+-            log_verbose "User declined package installation for: ${declined_list}"
++            if prompt_yes_no_default_no "Skip dependency installation and continue?"; then
++                echo "Continuing without installing system dependencies."
++                return
++            fi
++            echo "Installation aborted due to missing dependencies." >&2
+             exit 1
+         fi
+         require_command sudo "sudo"
