@@ -1,6 +1,6 @@
 # EDMCModernOverlay 0.9.2 on SteamOS — verified installation
 
-**Tested 13 November 2026:** Steam Deck (Corsair), KDE Plasma Desktop Mode (Wayland/Xwayland), EDMC Flatpak `io.edcd.EDMarketConnector` 6.1.2, EDMCModernOverlay Linux release 0.9.2, Python 3.14.6, display 1920×1200. Full test overlay rendered over Elite Dangerous. Gaming Mode is **not tested**.
+**Tested 13 November 2026:** Steam Deck, KDE Plasma Desktop Mode (Wayland/Xwayland), EDMC Flatpak `io.edcd.EDMarketConnector` 6.1.2, EDMCModernOverlay Linux release 0.9.2, Python 3.14.6, display 1920×1200. Full test overlay rendered over Elite Dangerous. Gaming Mode is **not tested**.
 
 All commands below run on the **SteamOS host**, never inside Fedora Distrobox. Leave SteamOS's protected system partition read-only.
 
