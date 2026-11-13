@@ -19,7 +19,7 @@ The archive includes the plugin and its virtualenv but may **not** include EDMC 
 1. Read upstream release notes: https://github.com/SweetJonnySauce/EDMCModernOverlay/releases
 2. Download/extract the **new** Linux release into a new directory; do not delete the known-good installer.
 3. Check whether the upstream developer has fixed package checking and host `wmctrl` discovery.
-4. If still necessary, `patch --dry-run -p1` against the **new version** of `install_linux.sh` and/or `load.py`. Stop on failed/misaligned patch; do not use `--force`. Consider changes if the hunk applies with unexpected offset/fuzz.
+4. If still necessary, `git apply --check -p1` against the **new version** of `install_linux.sh` and/or `load.py`. Stop on failed/misaligned patch; do not use `--force`. Consider changes if the hunk applies with unexpected offset/fuzz.
 5. Check syntax with `bash -n install_linux.sh` and `python3 -m py_compile load.py`.
 6. Install and manually test full overlay rendering over Elite Dangerous in **Desktop Mode** before treating the update as successful.
 7. Record the new versions and outcome; preserve a separately named patch set for the new version.
