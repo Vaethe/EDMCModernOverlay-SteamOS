@@ -56,13 +56,13 @@ Back up and dry-run the version-specific patch:
 
 ```bash
 cp install_linux.sh install_linux.sh.backup
-patch --dry-run -p1 < ~/Projects/EDMCModernOverlay-SteamOS/patches/0.9.2/install_linux.patch
+git apply --check -p1  ~/Projects/EDMCModernOverlay-SteamOS/patches/0.9.2/install_linux.patch
 ```
 
 If successful, apply it:
 
 ```bash
-patch -p1 < ~/Projects/EDMCModernOverlay-SteamOS/patches/0.9.2/install_linux.patch
+git apply -p1  ~/Projects/EDMCModernOverlay-SteamOS/patches/0.9.2/install_linux.patch
 bash -n install_linux.sh
 ```
 
@@ -101,13 +101,13 @@ Close EDMC, then:
 ```bash
 cd ~/.var/app/io.edcd.EDMarketConnector/data/EDMarketConnector/plugins/EDMCModernOverlay
 cp load.py load.py.backup
-patch --dry-run -p1 < ~/Projects/EDMCModernOverlay-SteamOS/patches/0.9.2/load.py.patch
+git apply --check -p1  ~/Projects/EDMCModernOverlay-SteamOS/patches/0.9.2/load.py.patch
 ```
 
 Only if the dry run succeeds:
 
 ```bash
-patch -p1 < ~/Projects/EDMCModernOverlay-SteamOS/patches/0.9.2/load.py.patch
+git apply -p1  ~/Projects/EDMCModernOverlay-SteamOS/patches/0.9.2/load.py.patch
 python3 -m py_compile load.py
 ```
 
